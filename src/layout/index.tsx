@@ -5,12 +5,10 @@ import { NavLIst } from './interface';
 import Header from './components/Header';
 
 const Layout: React.FC<LayoutProps> = ({ navList }) => {
-  console.log('asdssss', navList);
-
   return (
-    <div className="flex h-screen overflow-hidden">
+    <div className="flex h-screen">
       <SideBar navList={navList} />
-      <main className="flex flex-col flex-1">
+      <main className="flex flex-col flex-1 overflow-hidden">
         <Header />
         <div className="flex-1 overflow-auto">
           <Outlet />
